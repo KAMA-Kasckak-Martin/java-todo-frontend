@@ -21,6 +21,22 @@ public class KanbanService {
     }
 
     public Todo addNewTodo(Todo todo){
-        return todoRepository.addTodo(todo);
+       int id = getAllTodos().size()+1;
+        Todo addId = new Todo(String.valueOf(id),todo.description(),todo.status());
+        return todoRepository.addTodo(addId);
     }
+
+    public Todo getById(String id){
+        return todoRepository.getById(id);
+    }
+
+    public Todo editTodo(String id, Todo todo){
+        return todoRepository.editTodo(id, todo);
+    }
+
+    public String deleteTodo(String id){
+        return todoRepository.deleteTodo(id);
+    }
+
+
 }
