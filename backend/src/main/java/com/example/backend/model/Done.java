@@ -1,4 +1,6 @@
 package com.example.backend.model;
 
-public record Done() {
+public record Done(
+        String done
+) {
 }

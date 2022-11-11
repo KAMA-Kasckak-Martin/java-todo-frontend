@@ -1,4 +1,6 @@
 package com.example.backend.model;
 
-public record Todo() {
+public record Todo(
+        String todo
+) {
 }
